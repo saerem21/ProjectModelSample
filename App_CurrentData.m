@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  App_CurrentData.m
 //  ProjectModelSample
 //
 //  Created by SDT-1 on 2014. 1. 9..
 //  Copyright (c) 2014년 SDT-1. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "App_CurrentData.h"
 
-@interface ViewController : UIViewController
-
-
+@implementation App_CurrentData
 
 @end
