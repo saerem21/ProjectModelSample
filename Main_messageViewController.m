@@ -10,28 +10,31 @@
 
 @interface Main_messageViewController ()
 @property (weak, nonatomic) IBOutlet UIView *btn_view;
+@property (weak, nonatomic) IBOutlet UIImageView *btn_img;
 
 @end
 
 @implementation Main_messageViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+
+- (void)onFullSizeScreen{
+    self.btn_img.hidden = YES;
+    self.btn_view.hidden =YES;
 }
+
+
 - (IBAction)button_clicked:(id)sender {
     
         [UIView beginAnimations:nil context:nil];
         CATransform3D _3Dt = CATransform3DRotate(self.btn_view.layer.transform, 3.14, 0.0,1.0,0.0);
-        [UIView setAnimationRepeatCount:100];
+        CATransform3D _3Dt1 = CATransform3DScale(_3Dt, 2.5, 2.5, 2.5);
+        [UIView setAnimationRepeatCount:10];
         [UIView setAnimationDuration:0.08];
-        self.btn_view.layer.transform=_3Dt;
+        self.btn_view.layer.transform=_3Dt1;
         [UIView commitAnimations];
     
+    
+    //[self performSelector:@selector(onFullSizeScreen) withObject:nil afterDelay:1.0];
 }
 
 - (void)viewDidLoad

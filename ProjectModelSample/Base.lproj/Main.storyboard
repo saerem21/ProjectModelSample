@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nX-TD-SFy">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="273"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
@@ -47,15 +47,15 @@
                         <viewControllerLayoutGuide type="bottom" id="osO-5q-66o"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N0k-Nj-dqZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="273"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYH-9S-SXy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="273"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i0.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-0S-PdL">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="273"/>
+                                        <rect key="frame" x="59" y="0.0" width="202" height="202"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKp-Nk-nSn">
@@ -76,6 +76,7 @@
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="btn_img" destination="nN6-0S-PdL" id="AUB-rU-UZD"/>
                         <outlet property="btn_view" destination="HYH-9S-SXy" id="Eyq-rV-Grg"/>
                     </connections>
                 </viewController>
