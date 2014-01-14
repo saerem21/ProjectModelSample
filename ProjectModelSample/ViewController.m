@@ -13,9 +13,12 @@
 {
     sqlite3 *db;
 }
+@property (weak, nonatomic) IBOutlet UIView *messageView;
 @end
 
 @implementation ViewController
+
+
 
 - (void)viewDidLoad
 {
@@ -47,6 +50,19 @@
     }
 }
 
+- (IBAction)button_clicked:(id)sender {
+    
+    [UIView beginAnimations:nil context:nil];
+    CATransform3D _3Dt = CATransform3DRotate(self.messageView.layer.transform, 3.14, 0.0,1.0,0.0);
+    CATransform3D _3Dt1 = CATransform3DScale(_3Dt, 2.3, 2.3, 2.3);
+    [UIView setAnimationRepeatCount:10];
+    [UIView setAnimationDuration:0.08];
+    self.messageView.layer.transform=_3Dt1;
+    [UIView commitAnimations];
+    
+    
+    //[self performSelector:@selector(onFullSizeScreen) withObject:nil afterDelay:1.0];
+}
 
 - (void)didReceiveMemoryWarning
 {
