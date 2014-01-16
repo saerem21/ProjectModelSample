@@ -74,7 +74,6 @@
                                 </state>
                                 <connections>
                                     <action selector="btn2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gnF-uf-hCL"/>
-                                    <action selector="button_clicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t86-Hv-TKI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8t-g4-6Ch">
@@ -85,7 +84,16 @@
                                 </state>
                                 <connections>
                                     <action selector="btn3:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hmf-8K-Oh2"/>
-                                    <action selector="button_clicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hgx-uK-tWy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-mx-dQ1">
+                                <rect key="frame" x="249" y="516" width="55" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="옵션">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7PN-fb-E2e" kind="modal" id="2eT-Ak-T0i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,10 +110,28 @@
             </objects>
             <point key="canvasLocation" x="49" y="-1"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="WXn-qo-NUz">
+            <objects>
+                <viewController id="7PN-fb-E2e" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLx-Z4-FvO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ISW-tm-ZB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NUw-ea-ijK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQB-f0-r7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="582"/>
+        </scene>
         <!--message-->
         <scene sceneID="dFg-Og-hNX">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aLy-DE-uib" userLabel="message" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aLy-DE-uib" userLabel="message" customClass="Main_messageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M3P-AM-Y8j"/>
                         <viewControllerLayoutGuide type="bottom" id="Sf8-fo-5NW"/>
@@ -121,6 +147,48 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-OA-Dhq">
+                                <rect key="frame" x="128" y="74" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="보낸메세지">
+                                    <color key="titleColor" red="0.68437099499999998" green="0.051825721319999997" blue="0.82776409650000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DYo-NZ-GuU" kind="modal" modalTransitionStyle="coverVertical" id="rPK-pE-xve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY9-bA-FMe">
+                                <rect key="frame" x="128" y="459" width="65" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="받은메세지">
+                                    <color key="titleColor" red="0.82776409650000005" green="0.0" blue="0.013988919688943639" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DYo-NZ-GuU" kind="modal" modalTransitionStyle="partialCurl" id="xnH-Y9-V7o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMs-XX-kzz">
+                                <rect key="frame" x="137" y="121" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DYo-NZ-GuU" kind="modal" modalTransitionStyle="flipHorizontal" id="xxX-R3-eHh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLV-fd-fV3">
+                                <rect key="frame" x="137" y="410" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DYo-NZ-GuU" kind="modal" modalTransitionStyle="crossDissolve" id="2l8-iU-A1p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56476812282848821" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -130,6 +198,36 @@
             </objects>
             <point key="canvasLocation" x="963" y="-959"/>
         </scene>
+        <!--sub1_messageList-->
+        <scene sceneID="p0h-hE-XbB">
+            <objects>
+                <viewController id="DYo-NZ-GuU" userLabel="sub1_messageList" customClass="Sub_messageList_ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rgJ-PS-amo"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWr-43-s1d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XC8-zi-EdE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wha-tG-GJM">
+                                <rect key="frame" x="137" y="260" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exit:" destination="DYo-NZ-GuU" eventType="touchUpInside" id="xUm-4j-MfL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WJ-Fg-t7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="-959"/>
+        </scene>
         <!--timer-->
         <scene sceneID="w4O-bp-Ben">
             <objects>
@@ -138,10 +236,18 @@
                         <viewControllerLayoutGuide type="top" id="Aly-QT-NWN"/>
                         <viewControllerLayoutGuide type="bottom" id="vVY-li-OBg"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nL5-vX-6Nt">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="11" contentMode="center" id="nL5-vX-6Nt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시간 페이지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGs-3b-W6d">
+                                <rect key="frame" x="121" y="263" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45087084970000002" green="0.82776409650000005" blue="0.40016654369999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -157,10 +263,18 @@
                         <viewControllerLayoutGuide type="top" id="n8V-Ny-ZoV"/>
                         <viewControllerLayoutGuide type="bottom" id="Gn2-AO-bgG"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Rw0-Ji-aRB">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="12" contentMode="center" id="Rw0-Ji-aRB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="바람개비 페이지 입니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qp-K8-Njk">
+                                <rect key="frame" x="79" y="263" width="162" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6843709949691047" green="0.051825721316754655" blue="0.82776409650000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -179,7 +293,15 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u1g-U8-hk1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="차트페이지 입니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9W-kC-Q2m">
+                                <rect key="frame" x="96" y="263" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.9853864486823265" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -198,6 +320,14 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nqy-Ya-11G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="포기 받는 페이지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLg-9S-CNV">
+                                <rect key="frame" x="106" y="263" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
@@ -209,10 +339,15 @@
     </scenes>
     <resources>
         <image name="i0.jpeg" width="224" height="225"/>
+        <image name="i0.jpeg" width="224" height="225"/>
+        <image name="i0.jpeg" width="224" height="225"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="xnH-Y9-V7o"/>
+    </inferredMetricsTieBreakers>
 </document>

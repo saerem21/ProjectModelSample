@@ -26,6 +26,7 @@
 		00BE677B187EA2BD001537B8 /* ProjectModelSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE677A187EA2BD001537B8 /* ProjectModelSampleTests.m */; };
 		00BE6786187EA303001537B8 /* App_CurrentData.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE6785187EA303001537B8 /* App_CurrentData.m */; };
 		00BE689B187FF1C5001537B8 /* i0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00BE689A187FF1C5001537B8 /* i0.jpeg */; };
+		00C3B9C0188785FE0096708D /* Sub_messageList_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3B9BF188785FE0096708D /* Sub_messageList_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		00BE6784187EA303001537B8 /* App_CurrentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = App_CurrentData.h; path = ../App_CurrentData.h; sourceTree = "<group>"; };
 		00BE6785187EA303001537B8 /* App_CurrentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = App_CurrentData.m; path = ../App_CurrentData.m; sourceTree = "<group>"; };
 		00BE689A187FF1C5001537B8 /* i0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i0.jpeg; sourceTree = "<group>"; };
+		00C3B9BE188785FE0096708D /* Sub_messageList_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub_messageList_ViewController.h; sourceTree = "<group>"; };
+		00C3B9BF188785FE0096708D /* Sub_messageList_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub_messageList_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				00BE6765187EA2BD001537B8 /* ViewController.m */,
 				00BE6767187EA2BD001537B8 /* Images.xcassets */,
 				00BE6756187EA2BD001537B8 /* Supporting Files */,
+				00C3B9BE188785FE0096708D /* Sub_messageList_ViewController.h */,
+				00C3B9BF188785FE0096708D /* Sub_messageList_ViewController.m */,
 			);
 			path = ProjectModelSample;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C3B9C0188785FE0096708D /* Sub_messageList_ViewController.m in Sources */,
 				00BE6766187EA2BD001537B8 /* ViewController.m in Sources */,
 				00BE6786187EA303001537B8 /* App_CurrentData.m in Sources */,
 				00BE6760187EA2BD001537B8 /* AppDelegate.m in Sources */,

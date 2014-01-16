@@ -108,6 +108,26 @@
     
 }
 
+-(void)timerPageOn{
+    
+    UIView *addview = [self.view viewWithTag:11];
+    //scroll.hidden=YES;
+    addview.frame = CGRectMake(0,20, addview.frame.size.width, addview.frame.size.height );
+    addview.hidden = NO;
+    [self.view addSubview:addview];
+    
+}
+
+-(void)fanPageOn{
+    
+    UIView *addview = [self.view viewWithTag:12];
+    //scroll.hidden=YES;
+    addview.frame = CGRectMake(0,20, addview.frame.size.width, addview.frame.size.height );
+    addview.hidden = NO;
+    [self.view addSubview:addview];
+    
+}
+
 - (IBAction)btn2:(id)sender {
     [UIView beginAnimations:nil context:nil];
     
@@ -121,6 +141,8 @@
     [UIView setAnimationDuration:0.5];
     self.btn2.layer.transform=_3Dt1;
     [UIView commitAnimations];
+    
+    [self performSelector:@selector(timerPageOn) withObject:nil afterDelay:0.5];
     
 }
 - (IBAction)btn3:(id)sender {
@@ -137,6 +159,7 @@
     self.btn3.layer.transform=_3Dt1;
     [UIView commitAnimations];
     
+    [self performSelector:@selector(fanPageOn) withObject:nil afterDelay:0.5];
 }
 
 - (void)didReceiveMemoryWarning
